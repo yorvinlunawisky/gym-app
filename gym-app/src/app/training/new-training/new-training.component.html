@@ -4,8 +4,8 @@
         <mat-card-content fxLayoutAlign="center">
             <mat-form-field>
                 <mat-select placeholder="Favorite food">
-                    <mat-option value="crunches">
-                        Crunches
+                    <mat-option *ngFor="let exercise of exercises" [value]="exercise.id">
+                        {{exercise.name}}
                     </mat-option>
                     <mat-option value="touch-toes">
                         Touch Toes
